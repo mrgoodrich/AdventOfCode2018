@@ -34,13 +34,6 @@ var curMarble = {
 curMarble.next = curMarble;
 curMarble.prev = curMarble;
 
-var newMarble = {
-   mNum: 1,
-   next: curMarble,
-   prev: curMarble,
-}
-curMarble = newMarble;
-
 for (var playerNum = 0; playerNum < numPlayers; playerNum++) {
    players.push(0);
 }

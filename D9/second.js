@@ -34,13 +34,6 @@ var curMarble = {
 curMarble.next = curMarble;
 curMarble.prev = curMarble;
 
-var newMarble = {
-   mNum: 1,
-   next: curMarble,
-   prev: curMarble,
-}
-curMarble = newMarble;
-
 for (var playerNum = 0; playerNum < numPlayers; playerNum++) {
    players.push(0);
 }
@@ -73,9 +66,9 @@ for (var turnNdx = 1; turnNdx < numMarbles; turnNdx++) {
       var twoClockwise = curMarble.next.next;
       //console.log('2 -> ' + twoClockwise.mNum);
       oneClockwise.next = newMarble;
+      twoClockwise.prev = newMarble;
       newMarble.prev = oneClockwise;
       newMarble.next = twoClockwise;
-      twoClockwise.prev = newMarble;
       curMarble = newMarble;
    }
    //console.log('after t' + turnNdx + ', ' + curMarble.prev.mNum + ' cur ' + curMarble.mNum + ' ' + curMarble.next.mNum)
