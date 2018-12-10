@@ -276,7 +276,7 @@ function work() {
     } else {
       var next = getNextAlph();
       if (next) {
-        inProgress[next] = next.charCodeAt(0) - 64 + 60;//TODO + 60 DONE
+        inProgress[next] = next.charCodeAt(0) - 64 + 60;
         takenTasks.push(next);
       }
     }
