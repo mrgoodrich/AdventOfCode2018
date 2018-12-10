@@ -511,9 +511,9 @@ function printGrid() {
       locs[val.position[0]][val.position[1]] = '#';
    });
    console.log(data[0].position);
-   for (var y = 150; y < 210; y++) {
+   for (var y = -50; y < 50; y++) {
       let row = '';
-      for (var x = 180; x < 290; x++) {
+      for (var x = -50; x < 50; x++) {
          row += locs[x][y];
       }
       console.log(row);
