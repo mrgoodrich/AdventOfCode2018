@@ -265,12 +265,6 @@ function getPathToClosest(thisPlayer) {
          var x = potentialTarget.x + [0, -1, 1, 0][i];
          var y = potentialTarget.y + [-1, 0, 0, 1][i];
 
-         if (round === 36) {
-            console.log('x, y - ' + x + ', ' + y);
-            console.log(isValid(y, x));
-            console.log(isEmptySpot(y, x));
-         }
-
          if (isValid(y, x) && isEmptySpot(y, x)) {
             potentialAdjs.push([x, y]);
          }
@@ -299,13 +293,21 @@ function getPathToClosest(thisPlayer) {
       var path = BFS(thisPlayer, potentialAdj[0], potentialAdj[1]);
       // console.log('    ' + path);
       if (path !== -1) {
-         if (
-            closestDist === -1
-            || path.length < closestDist
-            || (path.length === closestDist && (
-               potentialAdjs[1] < closestAdjY
-               || (potentialAdjs[1] === closestAdjY && potentialAdjs[0] < closestAdjX)
-            ))) {
+         var shouldRepl = false;
+         if (closestDist === -1 || closestAdjX === undefined || closestAdjY === undefined) {
+            shouldRepl = true;
+         }
+         if (path.length < closestDist) {
+            shouldRepl = true;
+         }
+         if (path.length === closestDist) {
+            if (potentialAdj[1] < closestAdjY) {
+               shouldRepl = true;
+            } else if (potentialAdj[1] === closestAdjY && potentialAdj[0] < closestAdjX) {
+               shouldRepl = true;
+            }
+         }
+         if (shouldRepl) {
             closestPath = path;
             closestDist = path.length;
             closestAdjX = potentialAdj[0];
@@ -374,6 +376,7 @@ function BFS(src, dstX, dstY) {
    // console.log('dst is ' + JSON.stringify(dst));
 
    var validPaths = [];
+   var bestLength = -1;
 
    if (data[src.y][src.x] === '#' || data[dstY][dstX] === '#') {
       return -1;
@@ -546,7 +549,6 @@ function getXYStr(something) {
 268065 Not the right answer
 250745 Not right answer
 
-307098
-267285 maybe
+264384
 
 */
