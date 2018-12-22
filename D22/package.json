@@ -1,0 +1,14 @@
+{
+  "name": "d22",
+  "version": "1.0.0",
+  "description": "",
+  "main": "combined.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "priorityqueue": "^0.2.1"
+  }
+}
