@@ -11,8 +11,6 @@ for (var i = 0; i < padding; i++) {
   state = '.' + state + '.';
 }
 
-// console.log(potSum);
-  console.log(state);
 for (var gen = 0; gen < 20; gen++) {
   applyMatching();
   // increaseSum();
