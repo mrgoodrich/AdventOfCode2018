@@ -29,8 +29,6 @@ for (var x = 1; x < 301; x++) {
       grid[x][y] = powerLevel;
    }
 }
-//[[   ],
-// []]
 
 var highest = 0;
 var highestX = -1;
