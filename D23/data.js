@@ -1,4 +1,5 @@
 exports.test =
+   // Part one test data.
    // [{pos:[0,0,0], r:4},
    // {pos:[1,0,0], r:1},
    // {pos:[4,0,0], r:3},
@@ -9,6 +10,7 @@ exports.test =
    // {pos:[1,1,2], r:1},
    // {pos:[1,3,1], r:1}];
 
+   // Part two test data.
    [
       {pos: [10,12,12], r:2},
       {pos: [12,14,12], r:2},
