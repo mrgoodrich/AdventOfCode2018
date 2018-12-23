@@ -290,9 +290,6 @@ function printTrackWithCarts() {
 }
 
 
-// Remove carts and store.
-
-
 /* GUESSES
 
 2nd 0,121
