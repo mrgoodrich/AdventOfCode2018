@@ -3,13 +3,6 @@ String.prototype.replaceAll = function(search, replacement) {
     return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-// console.log("tes".replaceAll('te', 'f'));
-
-// for (var ndx in arr) {
-//   var val = arr[ndx];
-//
-//   console.log(val);
-// }
 var data = [{id:1, left:912, top:277, width:27, height:20},
 {id:2, left:129, top:477, width:14, height:12},
 {id:3, left:915, top:716, width:17, height:23},
