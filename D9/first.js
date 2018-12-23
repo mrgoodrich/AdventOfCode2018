@@ -10,19 +10,6 @@ String.prototype.replaceAll = function (search, replacement) {
    return target.replace(new RegExp(search, 'g'), replacement);
 };
 
-// console.log("tes".replaceAll('te', 'f'));
-
-// for (var ndx in arr) {
-//   var val = arr[ndx];
-//
-//   console.log(val);
-// }
-
-// var map = {};
-// (!map.test) && (map.test = 'hi');
-
-// objiter arriter
-
 var numMarbles = 70825;
 var numPlayers = 428;
 
